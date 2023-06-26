@@ -3,12 +3,13 @@ import { faker } from '@faker-js/faker';
 import Layout from '../layouts/Layout.astro';
 import Countdown from '../components/Countdown';
 
-let soon = faker.date.soon({ days: 10 });
-soon.setMilliseconds(0);
+const tomorrow = new Date()
+tomorrow.setDate(tomorrow.getDate() + 1)
+tomorrow.setHours(0,0,0,0)
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Countdown client:visible targetDate={soon} />
+		<Countdown client:visible targetDate={tomorrow} />
 	</main>
 </Layout>
