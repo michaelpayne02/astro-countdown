@@ -18,7 +18,7 @@ const Countdown = (props) => {
   setTimeout(() => {
     update();
     setInterval(update, 1000);
-  }, 1000 - new Date().getMilliseconds());
+  }, 1000 - new Date().getMilliseconds() + 500);
 
   return (
     <div class="pt-10 h-screen bg-gradient-to-b from-blue-50 to-sky-300 dark:from-cyan-700 dark:to-sky-900">

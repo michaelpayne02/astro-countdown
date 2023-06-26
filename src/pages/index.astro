@@ -1,9 +1,10 @@
 ---
 import { faker } from '@faker-js/faker';
 import Layout from '../layouts/Layout.astro';
-import Countdown from '../components/Countdown.tsx';
+import Countdown from '../components/Countdown';
 
-const soon = faker.date.soon({ days: 10 });
+let soon = faker.date.soon({ days: 10 });
+soon.setMilliseconds(0);
 ---
 
 <Layout title="Welcome to Astro.">
